@@ -157,6 +157,8 @@ header {
   margin-top: 20px;
 }
 .todoList .todo-container .todo-list li {
+  min-height: 60px;
+  height: auto;
   width: 70%;
   margin: 0 0 10px 0;
   background-color: #9DAAF2;
@@ -164,14 +166,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
 }
 .todoList .todo-container .todo-list li p {
   padding: 5px 18px;
   font-size: 22px;
+  width: 80%;
+  word-wrap: break-word;
 }
 .todoList .todo-container .todo-list li div {
   height: 100%;
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;

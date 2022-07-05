@@ -1,0 +1,19 @@
+@mixin d-flex($display:flex,$justify-content:center,$align-items:center) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    
+}
+@mixin rounded-corners($top-left:0,$top-right:0,$bottom-right:0,$bottom-left:0) {
+
+        border-radius: $top-left $top-right $bottom-right $bottom-left;
+
+}
+@mixin margin-padding($top:0,$right:0,$bottm:0,$left:0,$margin:true) {
+    @if $margin {
+        margin: $top $right $bottm $left;
+    }
+    @else {
+        padding: $top $right $bottm $left;
+    }
+}

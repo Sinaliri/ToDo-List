@@ -1,0 +1,196 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol,li{
+    list-style: none;
+}
+body{
+    height:100vh;
+    width: 100vw;
+    background-color: $primary-color;
+    margin: 0 auto;
+}
+header{
+    color: $accent-color;
+    @include d-flex;
+    font: { 
+        size: 56px;
+        weight:bold;
+     }
+    @include margin-padding(40px);
+    letter-spacing: 20px;
+    text-shadow: 3px 1px 2px #ff6a3d;
+}
+.todoList{
+    margin: 0 auto;
+    background-color: $primary-color;
+    color: $text-color;
+   .time{
+    width: 100%;
+    flex-direction: column;
+    .day{
+        color: $accent-color ;
+        @include d-flex(flex,center,center);
+        padding-top: 40px;
+        font: {
+            size: 64px;
+            weight:bold;
+        }
+    }
+    .date{
+        color: $yellow-color;
+        @include d-flex;
+        padding: 10px 0;
+    }
+   }
+   .form-container{
+    @include d-flex;
+    
+    form{
+        margin: 100px auto;
+        background-color: $lightblue-color;
+        @include d-flex(flex,space-around);
+        flex-wrap: wrap;
+        @include margin-padding(20px,10px,20px,0) ;
+     //   @include margin-padding(20px,10px,20px,0,false) ;
+     padding: 5px 0;  
+     border-radius: 5px;
+        height:auto;
+        width: 800px;
+        
+        .todo-inputs{
+            position: relative;
+            width: 360px;
+            height: 40px;
+           @include margin-padding(10px,20px,10px,10px) ;
+            .todoInput{
+             width: 100%;
+             height: 100%;
+             border-radius: 5px;
+             outline: none;
+             border: none;
+             padding: 10px;
+             font-size: 16px;
+            }
+            .todo-btn{
+                width: 40px;
+                height: 100%;
+                border-radius: 5px;
+                position: absolute;
+                border: none;
+                right: 0;
+                top: 0;
+                background-color:$accent-color;
+                cursor: pointer;
+    
+                
+                i{
+                    font-size: 28px;
+                   color: $text-color;
+                }
+                &:hover{
+                    background-color: $accent-color;
+                }
+                &:hover i{
+                color: $yellow-color;
+                }
+            }
+        }
+        .select{
+            width: 160px;
+            height: 40px;
+            position: relative;
+            select{
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                appearance: none;
+                outline: none;
+                border: none;
+                cursor: pointer;
+    
+    
+            }
+            &::after{
+                content: "\25BC";
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 40px;
+                @include d-flex;
+                border-radius: 5px;
+                background-color: $accent-color;
+                
+                pointer-events: none;
+            }
+        }
+       }
+   }
+   .todo-container{
+   @include d-flex;
+    .todo-list{
+        min-width:500px;
+        width: 50%;
+        @include d-flex;
+        flex-direction: column;
+        margin-top: 20px;
+        li{
+            width: 70%;
+            @include margin-padding(0,0,10px,0);
+            background-color: $secondary-color;
+            border-radius: 5px;
+            @include d-flex(flex,space-between);
+            height: 60px;
+           p{
+            padding: 5px 18px;
+            font-size: 22px;
+           }
+           div{
+            height: 100%;
+            @include d-flex;
+            @include margin-padding(0,10px) ;
+            .complete-btn{
+                height: 40px;
+                width: 40px;
+                background-color: $completed-btn-color;
+                padding: auto 0;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                @include margin-padding(0,5px);
+                i{
+                    color: $text-color;
+                     font-size: 20px;
+                }
+            }
+            .trash-btn{
+                height: 40px;
+                width: 40px;
+                cursor: pointer;
+                background-color: $accent-color;
+                padding: auto 0;
+                border: none;
+                border-radius: 5px;
+                i{
+                    color: $text-color;
+                    font-size: 20px;
+                }
+            }
+           }
+        }
+    }
+   }
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}

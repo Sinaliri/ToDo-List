@@ -1,0 +1,211 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #1A2238;
+  margin: 0 auto;
+}
+
+header {
+  color: #FF6A3D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 56px;
+  font-weight: bold;
+  margin: 40px 0 0 0;
+  letter-spacing: 20px;
+  text-shadow: 3px 1px 2px #ff6a3d;
+}
+
+.todoList {
+  margin: 0 auto;
+  background-color: #1A2238;
+  color: #fff;
+}
+.todoList .time {
+  width: 100%;
+  flex-direction: column;
+}
+.todoList .time .day {
+  color: #FF6A3D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  font-size: 64px;
+  font-weight: bold;
+}
+.todoList .time .date {
+  color: #F4DB7D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.todoList .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todoList .form-container form {
+  margin: 100px auto;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 10px 20px 0;
+  padding: 5px 0;
+  border-radius: 5px;
+  height: auto;
+  width: 800px;
+}
+.todoList .form-container form .todo-inputs {
+  position: relative;
+  width: 360px;
+  height: 40px;
+  margin: 10px 20px 10px 10px;
+}
+.todoList .form-container form .todo-inputs .todoInput {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+}
+.todoList .form-container form .todo-inputs .todo-btn {
+  width: 40px;
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
+  border: none;
+  right: 0;
+  top: 0;
+  background-color: #FF6A3D;
+  cursor: pointer;
+}
+.todoList .form-container form .todo-inputs .todo-btn i {
+  font-size: 28px;
+  color: #fff;
+}
+.todoList .form-container form .todo-inputs .todo-btn:hover {
+  background-color: #FF6A3D;
+}
+.todoList .form-container form .todo-inputs .todo-btn:hover i {
+  color: #F4DB7D;
+}
+.todoList .form-container form .select {
+  width: 160px;
+  height: 40px;
+  position: relative;
+}
+.todoList .form-container form .select select {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.todoList .form-container form .select::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #FF6A3D;
+  pointer-events: none;
+}
+.todoList .todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todoList .todo-container .todo-list {
+  min-width: 500px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.todoList .todo-container .todo-list li {
+  width: 70%;
+  margin: 0 0 10px 0;
+  background-color: #9DAAF2;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+.todoList .todo-container .todo-list li p {
+  padding: 5px 18px;
+  font-size: 22px;
+}
+.todoList .todo-container .todo-list li div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 0;
+}
+.todoList .todo-container .todo-list li div .complete-btn {
+  height: 40px;
+  width: 40px;
+  background-color: #3ba13b;
+  padding: auto 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px 0 0;
+}
+.todoList .todo-container .todo-list li div .complete-btn i {
+  color: #fff;
+  font-size: 20px;
+}
+.todoList .todo-container .todo-list li div .trash-btn {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background-color: #FF6A3D;
+  padding: auto 0;
+  border: none;
+  border-radius: 5px;
+}
+.todoList .todo-container .todo-list li div .trash-btn i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}/*# sourceMappingURL=style.css.map */

@@ -129,6 +129,11 @@ header {
   border: none;
   cursor: pointer;
 }
+.todoList .form-container form .select select option {
+  color: red;
+  padding: 10px 5px 10px 5px;
+  min-height: 2em;
+}
 .todoList .form-container form .select::after {
   content: "▼";
   position: absolute;

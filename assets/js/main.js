@@ -120,12 +120,12 @@ function removeOrComplete(event){
 
         if(item.classList[1] === "fa-check"){
             const todo=item.parentElement.parentElement.parentElement;
-            todo.classList.add("completed");
+            todo.classList.toggle("completed");
         }
         else  {
             const todo=item.parentElement.parentElement;
           //  console.log(todo.childNodes[1])
-            todo.classList.add("completed");
+            todo.classList.toggle("completed");
                 }
     }
 

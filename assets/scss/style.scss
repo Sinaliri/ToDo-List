@@ -53,7 +53,6 @@ header{
    }
    .form-container{
     @include d-flex;
-    
     form{
         margin: 100px auto;
         background-color: $lightblue-color;
@@ -64,8 +63,7 @@ header{
      padding: 5px 0;  
      border-radius: 5px;
         height:auto;
-        width: 800px;
-        
+        width: 800px;        
         .todo-inputs{
             position: relative;
             width: 360px;
@@ -89,9 +87,7 @@ header{
                 right: 0;
                 top: 0;
                 background-color:$accent-color;
-                cursor: pointer;
-    
-                
+                cursor: pointer;  
                 i{
                     font-size: 28px;
                    color: $text-color;
@@ -116,14 +112,7 @@ header{
                 appearance: none;
                 outline: none;
                 border: none;
-                cursor: pointer;
-                
-                option{
-                    color: red;
-                    @include margin-padding(10px,5px,10px,5px,false);
-                    min-height: 2em;
-                }
-    
+                cursor: pointer;   
             }
             &::after{
                 content: "\25BC";
@@ -134,8 +123,7 @@ header{
                 width: 40px;
                 @include d-flex;
                 border-radius: 5px;
-                background-color: $accent-color;
-                
+                background-color: $accent-color;                
                 pointer-events: none;
             }
         }
@@ -157,15 +145,12 @@ header{
             background-color: $secondary-color;
             border-radius: 5px;
             @include d-flex(flex,space-between);
-            
-            
-        
+            transition: opacity 0.5s ease;
            p{
             padding: 5px 18px;
             font-size: 22px;
             width: 80%;
-            word-wrap: break-word;
-            
+            word-wrap: break-word;          
            }
            .btn-container{
             height: 100%;
@@ -207,4 +192,5 @@ header{
 .completed{
     text-decoration: line-through;
     opacity: 0.5;
+    transition: all 0.5s ease;
 }

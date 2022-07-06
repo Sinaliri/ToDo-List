@@ -169,19 +169,13 @@ header{
                 i{
                     color: $text-color;
                      font-size: 20px;
-                }
+                    }
             }
             .trash-btn{
-                height: 40px;
-                width: 40px;
-                cursor: pointer;
+                @extend .complete-btn;
                 background-color: $accent-color;
-                padding: auto 0;
-                border: none;
-                border-radius: 5px;
                 i{
-                    color: $text-color;
-                    font-size: 20px;
+                    @extend i;
                 }
             }
            }

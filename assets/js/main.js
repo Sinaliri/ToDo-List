@@ -2,9 +2,13 @@ const todoInput=document.querySelector(".todoInput");
 const todoBtn=document.querySelector(".todo-btn");
 const todoList=document.querySelector(".todo-list");
 const filtertodos=document.querySelector("#filter-todos");
+
 todoBtn.addEventListener("click",addToDo);
 todoList.addEventListener("click", removeOrComplete);
 filtertodos.addEventListener("click", filterToDos); 
+document.addEventListener("DOMContentLoaded",gettodosFromLocalStorage);
+
+
 
 function filterToDos(event) {
     let todos = todoList.childNodes;
@@ -128,4 +132,38 @@ const todoIndex=todo.children[0].innerText;
 todos.splice(todos.indexOf(todoIndex), 1);
 localStorage.setItem("todos",JSON.stringify(todos));
 
+}
+function gettodosFromLocalStorage (event){
+    let todos;
+if(localStorage.getItem("todos") === null){
+    todos=[];
+}
+else{
+    todos=JSON.parse(localStorage.getItem("todos"));
+}
+todos.forEach(function(todo){
+    const todoText=document.createElement("p");
+
+    const newToDo=document.createElement("li");
+    todoText.innerText=todo; 
+    newToDo.appendChild(todoText); 
+  //  console.log(newToDo);
+    const btnContainer=document.createElement("div");
+    btnContainer.classList.add("btn-container");
+
+    const completeBtn=document.createElement("button");
+    completeBtn.classList.add("complete-btn");
+    completeBtn.innerHTML=`<i class="fa-solid fa-check"></i>`;
+    btnContainer.appendChild(completeBtn);
+
+    const trashBtn=document.createElement("button");
+    trashBtn.classList.add("trash-btn");
+    trashBtn.innerHTML=`<i class="fa-solid fa-trash-can"></i>`;
+    btnContainer.appendChild(trashBtn);
+    
+    newToDo.appendChild(btnContainer);
+
+    todoList.appendChild(newToDo);
+
+});
 }

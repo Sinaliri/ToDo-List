@@ -173,7 +173,7 @@ header {
   width: 80%;
   word-wrap: break-word;
 }
-.todoList .todo-container .todo-list li div {
+.todoList .todo-container .todo-list li .btn-container {
   height: 100%;
   width: 20%;
   display: flex;
@@ -181,7 +181,7 @@ header {
   align-items: center;
   margin: 0 10px 0 0;
 }
-.todoList .todo-container .todo-list li div .complete-btn {
+.todoList .todo-container .todo-list li .btn-container .complete-btn {
   height: 40px;
   width: 40px;
   background-color: #3ba13b;
@@ -191,11 +191,11 @@ header {
   cursor: pointer;
   margin: 0 5px 0 0;
 }
-.todoList .todo-container .todo-list li div .complete-btn i {
+.todoList .todo-container .todo-list li .btn-container .complete-btn i {
   color: #fff;
   font-size: 20px;
 }
-.todoList .todo-container .todo-list li div .trash-btn {
+.todoList .todo-container .todo-list li .btn-container .trash-btn {
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -204,7 +204,7 @@ header {
   border: none;
   border-radius: 5px;
 }
-.todoList .todo-container .todo-list li div .trash-btn i {
+.todoList .todo-container .todo-list li .btn-container .trash-btn i {
   color: #fff;
   font-size: 20px;
 }
